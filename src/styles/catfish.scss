@@ -1,0 +1,375 @@
+.catfish {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  z-index: 2;
+  max-width: 1024px;
+  width: 100%;
+  height: $bannerHeight;
+  margin: 0 auto;
+  background-color: $c-blue;
+  transform: translate(-50%);
+  overflow: hidden;
+
+  &--is-closed {
+    transition: bottom 0.3s;
+    bottom: -90px;
+  }
+
+  &__carousel {
+    position: absolute;
+    left: 10%;
+
+    @media (max-width: $largeBreakpoint) {
+      left: 5%;
+    }
+
+    @media (max-width: $mediumBreakpoint) {
+      left: 0;
+    }
+
+    @media (max-width: 520px) {
+      left: -15px;
+    }
+  }
+
+  &__shoping {
+    position: absolute;
+    top: $bannerHeight;
+    z-index: 1;
+    width: 158px;
+    height: 151px;
+    background: url(../images/catfish__img1.png) no-repeat center;
+    animation: slideTopShoping 5s infinite;
+
+    @keyframes slideTopShoping {
+      10% {
+        top: -18px;
+      }
+      40% {
+        top: -18px;
+      }
+      60% {
+        top: -160px;
+        opacity: 1;
+      }
+      61% {
+        opacity: 0;
+      }
+      100% {
+        top: $bannerHeight;
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: $mediumBreakpoint) {
+      background-image: url(../images/catfish__img1--small.png);
+    }
+  }
+
+  &__shoe {
+    position: absolute;
+    top: $bannerHeight;
+    z-index: 1;
+    width: 158px;
+    height: 151px;
+    background: url(../images/catfish__img2.png) no-repeat center;
+    animation: slideTopShoe 5s 2.5s infinite;
+
+    @keyframes slideTopShoe {
+      10% {
+        top: -32px;
+      }
+      40% {
+        top: -32px;
+      }
+      60% {
+        top: -160px;
+        opacity: 1;
+      }
+      61% {
+        opacity: 0;
+      }
+      100% {
+        top: $bannerHeight;
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: $mediumBreakpoint) {
+      background-image: url(../images/catfish__img2--small.png);
+    }
+  }
+
+  &__waves {
+    position: absolute;
+    bottom: 8px;
+    left: 18%;
+    width: 110px;
+    height: 37px;
+    background: url(../images/catfish__icon1.png) no-repeat center;
+
+    @media (max-width: $largeBreakpoint) {
+      bottom: 0;
+      left: 15%;
+    }
+
+    @media (max-width: $mediumBreakpoint) {
+      bottom: 8px;
+      left: 12%;
+      width: 88px;
+      height: 29px;
+      background-image: url(../images/catfish__icon1--small.png);
+    }
+  }
+
+  &__plus {
+    position: absolute;
+    top: 12px;
+    left: 33%;
+    width: 29px;
+    height: 29px;
+    background: url(../images/catfish__icon2.png) no-repeat center;
+
+    @media (max-width: $largeBreakpoint) {
+      left: 33%;
+    }
+
+    @media (max-width: $mediumBreakpoint) {
+      top: 4px;
+      width: 12px;
+      height: 12px;
+      background-image: url(../images/catfish__icon2--small.png);
+    }
+  }
+
+  &__text {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+
+    @media (max-width: $largeBreakpoint) {
+      left: 39%;
+      transform: translate(0, -50%);
+    }
+
+    @media (max-width: $mediumBreakpoint) {
+      left: 38%;
+    }
+  }
+
+  &__text1 {
+    position: relative;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: $bannerHeight;
+    animation: slideDownText1 5s 2.5s infinite;
+    @keyframes slideDownText1 {
+      5% {
+        top: $bannerHeight;
+      }
+      40% {
+        top: $bannerHeight;
+      }
+      60% {
+        top: 180px;
+        opacity: 1;
+      }
+      61% {
+        opacity: 0;
+      }
+      100% {
+        top: 0;
+        opacity: 0;
+      }
+    }
+  }
+
+  &__text2 {
+    position: relative;
+    top: -$bannerHeight;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: $bannerHeight;
+    animation: slideDownText2 5s infinite;
+    @keyframes slideDownText2 {
+      5% {
+        top: 0;
+      }
+      40% {
+        top: 0;
+      }
+      60% {
+        top: $bannerHeight;
+        opacity: 1;
+      }
+      61% {
+        opacity: 0;
+      }
+      100% {
+        top: -$bannerHeight;
+        opacity: 0;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 48px;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 120%;
+    color: $c-yellow;
+
+    @media (max-width: $mediumBreakpoint) {
+      font-size: 36px;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 27px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 21px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+
+    @media (max-width: $mediumBreakpoint) {
+      font-size: 16px;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 12px;
+    }
+  }
+
+  &__round {
+    position: absolute;
+    bottom: 15px;
+    left: 68%;
+    width: 27px;
+    height: 27px;
+    background: url(../images/catfish__icon3.png) no-repeat center;
+
+    @media (max-width:630 $largeBreakpoint) {
+      left: 70%;
+    }
+
+    @media (max-width: $mediumBreakpoint) {
+      bottom: 3px;
+      width: 23px;
+      height: 23px;
+      background-image: url(../images/catfish__icon3--small.png);
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 50%;
+    left: 76%;
+    transform: translate(0, -50%);
+    width: 158px;
+    height: 37px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    line-height: 37px;
+    color: $c-blue;
+    background-color: #fff;
+    border-radius: 20px;
+    animation: pulse 5s 3.5s infinite;
+
+    @keyframes pulse {
+      0% {
+        transform: translate(0, -50%) scale(1.2);
+      }
+      2% {
+        transform: translate(0, -50%) scale(1);
+      }
+      4% {
+        transform: translate(0, -50%) scale(1.2);
+      }
+      6% {
+        transform: translate(0, -50%) scale(1);
+      }
+      8% {
+        transform: translate(0, -50%) scale(1.2);
+      }
+      10% {
+        transform: translate(0, -50%) scale(1);
+      }
+    }
+
+    @media (max-width: $largeBreakpoint) {
+      left: 74%;
+    }
+
+    @media (max-width: 700px) {
+      left: 79%;
+      width: 68px;
+      height: 42px;
+      padding: 5px;
+      font-size: 16px;
+      line-height: 100%;
+      border-radius: 12px;
+    }
+  }
+
+  &__dots {
+    position: absolute;
+    top: 50%;
+    right: 4px;
+    transform: translate(0, -50%);
+    width: 46px;
+    height: 44px;
+    background: url(../images/catfish__icon4.png) no-repeat center;
+
+    @media (max-width: $largeBreakpoint) {
+      right: -14px;
+    }
+
+    @media (max-width: $mediumBreakpoint) {
+      top: -18px;
+      right: -18px;
+      transform: translate(0);
+      width: 37px;
+      height: 35px;
+      background-image: url(../images/catfish__icon4--small.png);
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    background-color: $c-grey;
+    cursor: pointer;
+  }
+
+  &__close-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 14px;
+    height: 2px;
+    background-color: #fff;
+
+    &:first-child {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &:last-child {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+}
